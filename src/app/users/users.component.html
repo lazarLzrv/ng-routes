@@ -1,0 +1,19 @@
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="list-group">
+                <a 
+                [routerLink]="['/users', i+1, user.name]"
+                class="list-group-item"
+                *ngFor="let user of users; let i = index">
+                {{ user.name }}
+                </a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <router-outlet></router-outlet>
+            <br>
+            <a class="btn btn-warning" (click)="onLoadIvan(12, 'ivan')"> Load Ivan (10)</a>
+        </div>
+    </div>
+
+
